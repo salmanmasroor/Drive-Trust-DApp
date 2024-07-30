@@ -54,7 +54,6 @@ router.get("/user", async(req,res)=>{
   })
 
     res.json(data)
-
   
   console.log(data)
 }catch(e){
@@ -271,7 +270,7 @@ router.post('/record',async (req,res)=>{
     from: "salman1811m@gmail.com",
     to: useremail,
     subject: 'DriveTrust',
-    text: 'Request Accept for car'
+    text: 'Your request for car rental has been accepted.'
   };
   
   transporter.sendMail(mailOptions, function(error, info){

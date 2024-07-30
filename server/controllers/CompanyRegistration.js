@@ -50,16 +50,17 @@ const setCompanyRegistration = async(req,res)=>{
       const alreadyregPublickey = await companyModel.findOne({publicKey:publicKey})
       const alreadycompanyName = await companyModel.findOne({companyName:companyName})
       console.log(alreadycompanyName+"sadad")
-      if(same){
+      console.log(same)
+      if(same && (same.verified === true)){
       res.send({msg1:"Email Already Registered"})
       }
-      else if(alreadycompanyName){
+      else if(alreadycompanyName && (alreadycompanyName.verified === true)){
         res.send({company_error:"Company Name already registered"})
       }
       else if(publickeyerror === null){
       res.send({wrong_publickey:"wrong public key"})
     }
-      else if(alreadyregPublickey){
+      else if(alreadyregPublickey && (alreadyregPublickey.verified === true)){
       res.send({wrong_publickey:"public key already registered"})
       }
       else if (!req.file) {
@@ -70,8 +71,69 @@ const setCompanyRegistration = async(req,res)=>{
         if (!req.file.filename.endsWith(".jpg") && !req.file.filename.endsWith(".png") && !req.file.filename.endsWith(".jpeg")) {
           res.send({ pic: "Only JPG, JPEG, and PNG files are allowed" });
       }
+
       
       else{
+   
+        if (same && !same.verified) {
+          const updatedCompany = await companyModel.findOneAndUpdate(
+               { companyEmail: email }, // Filter: Find the document with this email
+               {                  // Update: Set these fields in the document
+                companyName: companyName,
+                companyEmail : email,
+                password : await bcrypt.hash(password,10),
+                publicKey : publicKey,
+                logo : req.file.filename
+               },
+               {                  // Options object
+                   new: true       // To return the updated document
+               }
+           );
+     
+
+           const otp = otpGenerator.generate(4, { upperCaseAlphabets: false, specialChars: false,lowerCaseAlphabets: false, });
+
+           req.session.companyid = (updatedCompany._id).toString()
+        
+        
+   
+         
+         await companyotpModel.findOneAndUpdate({
+             company_id:updatedCompany._id},
+             {
+               otp:otp
+             },{
+               new:true
+             }
+           )
+           var transporter = nodemailer.createTransport({
+               service: 'gmail',
+               auth: {
+                 user: 'salman1817m@gmail.com',
+                 pass: 'debw jhqb jptb ezka'
+               }
+             });
+             
+             var mailOptions = {
+                from: "salman1817m@gmail.com",
+               to: email,
+               subject: 'Otp for Verification',
+               text: otp
+             };
+             
+             transporter.sendMail(mailOptions, function(error, info){
+               if (error) {
+                 console.log(error);
+               } else {
+                 console.log('Email sent: ' + info.response);
+               }
+             });
+          
+
+             res.send({ok:"ok",companyreg: "otp"})
+       }
+      
+       else{
         const company =await companyModel.create({
           companyName: companyName,
           companyEmail : email,
@@ -116,6 +178,7 @@ const setCompanyRegistration = async(req,res)=>{
 
         res.send({ok:"ok",companyreg: "otp"})
     }
+  }
   }
   }
     }
