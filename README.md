@@ -5,11 +5,11 @@
 
 The system ensures **trust, transparency, and immutability** by recording rental agreements on the blockchain while providing a smooth web experience for both users and companies.
 
-CarRental.sol smart contract.
-React frontend with pages for users, companies, and admin.
-Node.js backend with controllers for authentication and car management.
-Both user and company authentication systems.
-Admin panel functionality.
+- CarRental.sol smart contract.
+- React frontend with pages for users, companies, and admin.
+- Node.js backend with controllers for authentication and car management.
+- Both user and company authentication systems.
+- Admin panel functionality.
 
 ---
 
@@ -125,5 +125,6 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
