@@ -27,28 +27,33 @@ The system ensures **trust, transparency, and immutability** by recording rental
 - [MetaMask](https://metamask.io/) browser extension  
 
 ---
+## ⚙️ Installation & Setup
 
-### 1️⃣ Backend Setup
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/salmanmasroor/Drive-Trust-DApp.git
+cd Drive-Trust-DApp
+```
+
+### 2️⃣ Backend Setup
 ```bash
 cd server
 npm install
 npm start
+```
 
-Frontend runs on http://localhost:3000
-
-3️⃣ Blockchain Setup
+### 3️⃣ Frontend Setup
+```bash
+cd client
+npm install
+npm start
+```
+### 4️⃣ Blockchain Setup
+```bash
 cd client
 npx hardhat compile
 npx hardhat run ignition/modules/Lock.js --network ganache
-
-
-⚡ Make sure Ganache is running at http://127.0.0.1:7545
-
-4️⃣ Database Setup
-
-Ensure MongoDB is running locally on port 27017
-
-Database name: carrentalproject
+```
 
 🔑 Key Features
 👤 User Management
@@ -113,10 +118,4 @@ CORS protection
 
 ✨ Additional Features
 
-Email notifications (booking confirmations)
-
-Image uploads for cars & documents
-
-Responsive UI design
-
-Real-time car availability
+Email notifications (e.g., booking confirmations)
