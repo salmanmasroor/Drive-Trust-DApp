@@ -70,7 +70,7 @@ Secure login with sessions
 
 Profile & CNIC verification (with image upload)
 
-![Admin Screenshot](screenshots/Reg%20&%20Login/1.png)
+![Admin Screenshot](screenshots/User/1.png)
 
 
 🏢 Company Management
@@ -128,6 +128,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
