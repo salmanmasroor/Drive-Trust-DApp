@@ -83,7 +83,7 @@ Handle booking requests
 
 Revenue tracking
 
-![Admin Screenshot](screenshots/Company/1.png)
+![Admin Screenshot](screenshots/Company/3.png)
 
 
 🚙 Car Rental System
@@ -140,6 +140,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
