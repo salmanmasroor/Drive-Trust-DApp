@@ -77,13 +77,13 @@ const setRegistration = async (req,res) => {
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                      user: 'salman1817m@gmail.com',
-                      pass: 'debw jhqb jptb ezka'
+                      user: '', //use your own email
+                      pass: '' // and pass key
                     }
                   });
                   
                   var mailOptions = {
-                    from: "salman1817m@gmail.com",
+                    from: "", //use your own email
                     to: _email,
                     subject: 'Otp for Verification',
                     text: otp
@@ -139,13 +139,13 @@ const setRegistration = async (req,res) => {
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                      user: 'salman1817m@gmail.com',
-                      pass: 'debw jhqb jptb ezka'
+                      user: '', //use your own email
+                      pass: '' //and pass key
                     }
                   });
                   
                   var mailOptions = {
-                     from: "salman1817m@gmail.com",
+                     from: "", //use your own email
                     to: _email,
                     subject: 'Otp for Verification',
                     text: otp
@@ -183,13 +183,13 @@ const setRegistration = async (req,res) => {
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                      user: 'salman1817m@gmail.com',
-                      pass: 'debw jhqb jptb ezka'
+                      user: '', //use your own email
+                      pass: '' // and pass key
                     }
                   });
                   
                   var mailOptions = {
-                     from: "salman1817m@gmail.com",
+                     from: "", //use your own email
                     to: _email,
                     subject: 'Otp for Verification',
                     text: otp

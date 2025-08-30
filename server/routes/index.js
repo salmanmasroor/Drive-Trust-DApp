@@ -261,13 +261,13 @@ router.post('/record',async (req,res)=>{
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'salman1811m@gmail.com',
-      pass: 'rtvp obsh raiu uopr'
+      user: '', //use your own email
+      pass: '' // and pass key
     }
   });
   
   var mailOptions = {
-    from: "salman1811m@gmail.com",
+    from: "", //use your own email
     to: useremail,
     subject: 'DriveTrust',
     text: 'Your request for car rental has been accepted.'
