@@ -96,7 +96,7 @@ View car details & availability
 
 Booking requests with offers
 
-![Admin Screenshot](screenshots/User/2.png)
+![Admin Screenshot](screenshots/User/3.png)
 
 
 🔗 Blockchain Integration
@@ -140,6 +140,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
