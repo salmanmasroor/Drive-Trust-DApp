@@ -122,7 +122,7 @@ Analytics & statistics
 
 Reward system
 
-![Admin Screenshot](screenshots/Admin/1.png)
+![Admin Screenshot](screenshots/Admin/4.png)
 
 
 🔒 Security Features
@@ -140,6 +140,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
