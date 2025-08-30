@@ -83,6 +83,9 @@ Handle booking requests
 
 Revenue tracking
 
+![Admin Screenshot](screenshots/Company/1.png)
+
+
 🚙 Car Rental System
 
 Browse cars from multiple companies
@@ -128,6 +131,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
