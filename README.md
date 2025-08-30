@@ -96,6 +96,9 @@ View car details & availability
 
 Booking requests with offers
 
+![Admin Screenshot](screenshots/User/2.png)
+
+
 🔗 Blockchain Integration
 
 Smart contract for rental agreements
@@ -106,6 +109,9 @@ Time-based rental management
 
 Transparent booking history
 
+![Admin Screenshot](screenshots/User/5.png)
+
+
 🛠️ Admin Dashboard
 
 Manage users & companies
@@ -115,6 +121,9 @@ Revenue & payments tracking
 Analytics & statistics
 
 Reward system
+
+![Admin Screenshot](screenshots/Admin/1.png)
+
 
 🔒 Security Features
 
@@ -131,6 +140,7 @@ CORS protection
 ✨ Additional Features
 
 Email notifications (e.g., booking confirmations)
+
 
 
 
